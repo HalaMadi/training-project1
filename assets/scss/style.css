@@ -1,0 +1,715 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 67%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  position: relative;
+}
+header .logo {
+  margin-top: 130px;
+  padding-right: 16px;
+}
+header .header__dotImg {
+  width: 70%;
+}
+
+/* Start Collapsible Menu*/
+.menu {
+  margin: auto;
+}
+.menu .menu-icon {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.menu .PersonBrief,
+.menu .contact {
+  padding-top: 10px;
+  width: 60%;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #aeadae;
+  font-weight: 800;
+  line-height: 22px;
+}
+
+.menu__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  background-color: #201e20;
+  z-index: 1000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.menu__content:target {
+  display: block;
+  max-height: 100%;
+}
+
+.menu__dotImg {
+  width: 43%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.549;
+}
+
+.menu__shape1 {
+  top: 100px;
+  left: 450px;
+  position: absolute;
+  width: 21px;
+  height: 44px;
+}
+
+.menu__shape4 {
+  position: absolute;
+  right: 350px;
+  top: 180px;
+  width: 43px;
+  height: 35px;
+}
+
+.menu__close-button {
+  position: absolute;
+  right: 100px;
+  margin-top: 112px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu__person-info .PersonName {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #aeadae;
+  font-weight: 400;
+  line-height: 37px;
+}
+.menu__person-info .PersonName__strong {
+  color: #fff;
+}
+
+.Personimg {
+  position: relative;
+}
+.Personimg .person-img {
+  border-radius: 113px;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 128px;
+  display: block;
+  width: 140px;
+  height: 140px;
+}
+.Personimg .shape2 {
+  position: absolute;
+  top: 60px;
+  left: 560px;
+  width: 72px;
+  height: 40px;
+}
+.Personimg .download-container {
+  right: 450px;
+  position: absolute;
+  top: 26px;
+  display: flex;
+  width: 13%;
+}
+.Personimg .download-container .download-icon {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 19px;
+  background-color: #d82547;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+}
+.Personimg .download-container .PersonResum {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.PersonSkills {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 150px;
+}
+.PersonSkills .Skill {
+  padding: 8px;
+  font-size: 30px;
+  text-align: center;
+}
+.PersonSkills .Skill .Skill__name {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 37px;
+}
+.PersonSkills .Skill .ProgressLine {
+  display: flex;
+}
+.PersonSkills .Skill .ProgressLine .rectp1 {
+  border-radius: 2px;
+  background-color: #c62fc6;
+  width: 200px;
+  height: 5px;
+}
+.PersonSkills .Skill .ProgressLine .rectp2 {
+  border-radius: 2px;
+  background-color: #000000;
+  width: 40px;
+  height: 5px;
+}
+.PersonSkills .Skill .ProgressLine .recti1 {
+  border-radius: 2px;
+  background-color: #f2d25d;
+  width: 200px;
+  height: 5px;
+}
+.PersonSkills .Skill .ProgressLine .recti2 {
+  border-radius: 2px;
+  background-color: #000000;
+  width: 80px;
+  height: 5px;
+}
+.PersonSkills .Skill .ProgressLine .recth1 {
+  border-radius: 2px;
+  background-color: #2959e1;
+  width: 200px;
+  height: 5px;
+}
+.PersonSkills .Skill .ProgressLine .recth2 {
+  border-radius: 2px;
+  background-color: #000000;
+  width: 40px;
+  height: 5px;
+}
+.PersonSkills .Skill .percentage {
+  text-align: center;
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #aeadae;
+  font-weight: 800;
+  line-height: 22px;
+}
+
+.PersonExperience {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.PersonExperience .Experience__Details {
+  border: 1px solid rgba(96, 93, 93, 0.29);
+}
+.PersonExperience .Experience__Details .Experience__year {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 28px;
+}
+.PersonExperience .Experience__Details p {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 28px;
+}
+.PersonExperience .Experience__Details .vertical-line {
+  border: 1px solid rgba(209, 203, 203, 0.29);
+  margin: 5px;
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+}
+
+/* End Collapsible Menu */
+/* End Header */
+/* Start Banner Section */
+.Banner {
+  z-index: 1;
+}
+.Banner .Banner__contecnt {
+  position: relative;
+}
+.Banner .Banner__contecnt .Banner_shape1 {
+  position: absolute;
+  right: 200px;
+  top: 20px;
+}
+.Banner .hello {
+  padding-bottom: 36px;
+  font-size: 195px;
+  letter-spacing: 6px;
+  color: rgb(64, 61, 64);
+  font-weight: 600;
+  line-height: 130px;
+}
+.Banner .Banner__pargraph {
+  width: 617px;
+  height: 102px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #aeadae;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+/* End Banner  */
+.Work {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.Work .WorkLink {
+  width: 450px;
+  height: 400px;
+}
+.Work .WorkLink .Work__img {
+  width: 450px;
+  height: 450px;
+}
+.Work .Work__box1 {
+  background-color: #baecee;
+}
+.Work .Work__box2 {
+  background-color: #fae1ef;
+  position: relative;
+}
+.Work .Work__box2 .Work__shape2 {
+  position: absolute;
+}
+.Work .Work__box3 {
+  background-color: #fffce6;
+  position: relative;
+}
+.Work .Work__box3 .Work_shape4 {
+  position: absolute;
+  top: 0;
+  left: -100px;
+}
+.Work .Work__box4 {
+  background-color: #e9bef6;
+  position: relative;
+}
+.Work .Work__box4 .Work_shape3 {
+  position: absolute;
+  top: 216px;
+  right: -55px;
+}
+.Work .button-corner {
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+}
+.Work .button-corner .button {
+  background-color: transparent;
+  color: rgb(6, 6, 6);
+  padding: 8px 15px;
+  border: none;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+/* Start Footer */
+.Footer {
+  background-color: #f2fbfb;
+  margin-top: -80px;
+}
+.Footer .Footer__content {
+  margin-top: 96px;
+  text-align: center;
+}
+.Footer .Footer__content .Footer__loading {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 100px;
+  font-size: 20px;
+  letter-spacing: 20px;
+  color: #403d40;
+  font-weight: 600;
+  line-height: 40px;
+}
+.Footer .Footer__content .Footer__img {
+  padding-bottom: 65px;
+  width: 48px;
+}
+.Footer .Footer__content .Footer_numbers {
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 2px;
+  color: #403d40;
+  font-weight: 600;
+  line-height: 40px;
+}
+.Footer .Footer__content .Footer-paragraph {
+  width: 50%;
+  text-align: center;
+  padding: 32px;
+  margin: auto;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #aeadae;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.link {
+  color: aquamarine;
+}
+
+.Footer_social {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+.Footer_social .Footer__SocialName {
+  text-transform: uppercase;
+  width: 20%;
+  font-size: 13px;
+  letter-spacing: 7px;
+  color: #403d40;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 30%;
+  }
+  .logo img {
+    width: 150px;
+    margin-bottom: 50px;
+  }
+  .Banner .Banner__contecnt .hello {
+    font-size: 100px;
+  }
+  .Banner .Banner__contecnt .Banner__pargraph {
+    font-size: 13px;
+  }
+  .Footer {
+    width: 165%;
+  }
+  .Footer .Footer__loading {
+    font-size: 16px;
+  }
+  .Footer .Footer__content .Footer_numbers {
+    font-size: 20px;
+  }
+  .Footer .Footer__content .Footer-paragraph {
+    width: 100%;
+  }
+  .Footer .Footer__content .Footer_social .Footer__SocialName {
+    padding: 0.8px;
+    font-size: 8px;
+    width: 80%;
+  }
+  .menu .menu__dotImg {
+    width: 50%;
+    top: 40px;
+  }
+  .menu .menu__shape4 {
+    right: 170px;
+    top: 50px;
+  }
+  .menu .shape2 {
+    width: 30px;
+    height: 20px;
+    left: 340px;
+  }
+  .menu .menu__shape1 {
+    top: 50px;
+    left: 250px;
+  }
+  .menu .menu__person-info .person-img {
+    margin-top: 90px;
+    width: 100px;
+    height: 100px;
+  }
+  .menu .menu__person-info .download-container {
+    top: 14px;
+    right: 260px;
+  }
+  .menu .menu__person-info .download-container .download-icon {
+    padding: 2px 0px;
+    font-size: 11px;
+    height: 17px;
+  }
+  .menu .menu__person-info .download-container .PersonResum {
+    font-size: 10px;
+  }
+  .menu .menu__person-info .PersonName {
+    padding-top: 7px;
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  .PersonSkills {
+    grid-template-columns: 150px 150px 150px;
+    gap: 50px;
+  }
+  .PersonSkills p .Skill {
+    font-size: 10px;
+  }
+  .PersonExperience .Experience__Details .Experience__year {
+    font-size: 10px;
+  }
+  .PersonExperience .Experience__Details p {
+    font-size: 8px;
+  }
+}
+.button-corner {
+  position: absolute;
+  bottom: 100px;
+  left: 2px;
+}
+.button-corner .button {
+  background-color: transparent;
+  color: rgb(6, 6, 6);
+  padding: 8px 15px;
+  border: none;
+  text-decoration: none;
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header .logo {
+    margin-top: 28px;
+  }
+  .Banner__contecnt .hello {
+    font-size: 100px;
+  }
+  .Banner__contecnt .Banner__pargraph {
+    font-size: 12px;
+  }
+  .Banner__contecnt .Banner_shape1 {
+    display: none;
+  }
+  .menu .menu__shape1 {
+    top: 30px;
+    left: 250px;
+  }
+  .menu__content .menu__shape4 {
+    right: 150px;
+    top: 30px;
+  }
+  .menu__content .shape2 {
+    width: 30px;
+    height: 20px;
+    left: 280px;
+  }
+  .menu__content .menu__person-info .person-img {
+    width: 100px;
+    height: 100px;
+    margin-top: 60px;
+  }
+  .menu__content .menu__person-info .download-container {
+    right: 32%;
+  }
+  .menu__content .menu__person-info .download-container .download-icon {
+    font-size: 16px;
+    padding-top: 1px;
+    height: 20px;
+  }
+  .menu__content .menu__person-info .download-container .PersonResum {
+    font-size: 10px;
+  }
+  .menu__content .menu__person-info .PersonName {
+    width: 100%;
+    margin: 8px;
+    font-size: 26px;
+    padding: 5px;
+  }
+  .menu__content .menu__person-info .PersonBrief {
+    width: 80%;
+  }
+  .menu__content .PersonSkills {
+    grid-template-columns: 250px 250px 250px;
+    gap: 3px;
+  }
+  .menu__content .ProgressLine {
+    width: 60%;
+    margin: auto;
+  }
+  .menu__content .Experience__Details .Experience__year {
+    font-size: 15px;
+  }
+  .menu__content .Experience__Details p {
+    font-size: 10px;
+    padding: 6px;
+    width: 100%;
+  }
+  .Footer {
+    width: 144%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+  .menu .menu__shape4 {
+    top: 20px;
+    right: 250px;
+  }
+  .menu .menu__shape1 {
+    left: 50px;
+    top: 20px;
+  }
+  .menu .menu__content .menu__person-info .person-img {
+    margin-top: 65px;
+    width: 130px;
+    height: 130px;
+  }
+  .menu .menu__content .menu__person-info .shape2 {
+    left: 430px;
+    width: 40px;
+    height: 40px;
+  }
+  .menu .menu__content .menu__person-info .download-container {
+    right: 330px;
+  }
+  .menu .menu__content .menu__person-info .download-container .download-icon {
+    font-size: 18px;
+    height: 22px;
+  }
+  .menu .menu__content .menu__person-info .download-container .PersonResum {
+    font-size: 10px;
+  }
+  .menu .menu__content .menu__person-info .download-container .PersonBrief {
+    width: 80%;
+  }
+  .menu .menu__content .menu__person-info .PersonName {
+    padding-top: 16px;
+    font-size: 28px;
+  }
+  .menu .menu__content .PersonSkills {
+    grid-template-columns: 200px 200px 200px;
+  }
+  .menu .menu__content .PersonSkills .Skill {
+    font-size: 30px;
+    text-align: center;
+  }
+  .menu .menu__content .Experience__Details {
+    border-bottom: none;
+  }
+  .menu .menu__content .Experience__Details .Experience__year {
+    font-size: 15px;
+  }
+  .menu .menu__content .hello {
+    font-size: 120px;
+  }
+  .menu .menu__content .Banner__pargraph {
+    font-size: 13px;
+    width: 617px;
+    height: 102px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .container {
+    width: 70%;
+  }
+  .menu .menu__shape4 {
+    top: 20px;
+    right: 250px;
+  }
+  .menu .menu__shape1 {
+    left: 50px;
+    top: 20px;
+  }
+  .menu .menu__content .menu__person-info .person-img {
+    margin-top: 65px;
+    width: 130px;
+    height: 130px;
+  }
+  .menu .menu__content .menu__person-info .shape2 {
+    left: 430px;
+    width: 40px;
+    height: 40px;
+  }
+  .menu .menu__content .menu__person-info .download-container {
+    right: 330px;
+  }
+  .menu .menu__content .menu__person-info .download-container .download-icon {
+    font-size: 18px;
+    height: 22px;
+  }
+  .menu .menu__content .menu__person-info .download-container .PersonResum {
+    font-size: 10px;
+  }
+  .menu .menu__content .menu__person-info .download-container .PersonBrief {
+    width: 80%;
+  }
+  .menu .menu__content .menu__person-info .PersonName {
+    padding-top: 16px;
+    font-size: 28px;
+  }
+  .menu .menu__content .PersonSkills {
+    grid-template-columns: 200px 200px 200px;
+  }
+  .menu .menu__content .PersonSkills .Skill {
+    font-size: 30px;
+    text-align: center;
+  }
+  .menu .menu__content .Experience__Details {
+    border-bottom: none;
+  }
+  .menu .menu__content .Experience__Details .Experience__year {
+    font-size: 15px;
+  }
+  .menu .menu__content .hello {
+    font-size: 120px;
+  }
+  .menu .menu__content .Banner__pargraph {
+    font-size: 13px;
+    width: 617px;
+    height: 102px;
+  }
+}/*# sourceMappingURL=style.css.map */
